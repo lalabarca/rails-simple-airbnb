@@ -1,2 +1,34 @@
 // Import page-specific CSS files here.
 @import "home";
+.container {
+  padding: 2.2rem 0;
+}
+
+.flat-card {
+  box-shadow: 0 1px 6px rgba($color: #000000, $alpha: 0.2);
+}
+
+.price {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+    span{
+    margin-right: 20px;
+    strong {
+      margin-right: 10px;
+    }
+  }
+}
+
+.footer-links {
+  padding: 15px 15px;
+  ul {
+    padding:0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-bottom: 0;
+    li {
+      margin-right: 15px;
+    }
+  }
+}
