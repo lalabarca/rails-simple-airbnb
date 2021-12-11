@@ -10,8 +10,12 @@ Flat.destroy_all
 
 puts "Creating flats..."
 5.times do
-  flat = Flat.new(name: Faker::flat.name, address: Faker::Address.street_address, category: category.sample)
-  flat.save
+  flat_name = ["Ideal homes", "The View", "CityViews", "City Dwellers", "Sunny Place", "Life on the Green", "The River", "Creekside Apartments", "The Den", "Wild Estates", "La Grande Maison"]
+  flat = Flat.create!(
+    name: flat_name.sample, address: Faker::Address.street_address,
+    description: Faker::Company.bs,
+    price_per_night: rand(20...250), number_of_guests: rand(1..4)
+  )
   puts "Created #{flat[:name]}"
 end
 puts "Finished"
