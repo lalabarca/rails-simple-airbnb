@@ -5,7 +5,9 @@
   <% @flats.each do |flat| %>
     <div class="col-12 col-md-6 col-lg-4">
       <div class="flat-card">
-        <figure></figure>
+        <figure>
+          <img src="<%= flat.img_url %>" alt="flat interior">
+        </figure>
         <div class="details bg-light card-body border-bottom">
           <h2><%= flat.name %></h2>
           <p><%= flat.address %></p>
@@ -14,8 +16,8 @@
         <footer class="footer-links">
           <ul>
           <li><%= link_to "More info", flat_path(flat), class: "btn btn-primary rounded" %></li>
-          <li><%= link_to "Edit", class: "text-warning card-link" %></li>
-          <li><%= link_to "Remove", class: "text-danger card-link" %></li>
+          <li><%= link_to "Edit", edit_flat_path(flat), class: "text-warning card-link" %></li>
+          <li><%= link_to "Remove", flat_path(flat), method: :delete, data: { confirm: "Are you sure? This action will permanently delete the flat." }, class: "text-danger card-link" %></li>
           </ul>
         </footer>
       </div>

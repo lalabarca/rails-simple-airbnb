@@ -1,1 +1,55 @@
-<h1><%= @flat.name %></h1>
+<div class="banner" style="background-image: url(<%= @flat.img_url%>);"></div>
+<main class="container">
+  <div class="row">
+    <div class="col-12 col-lg-8">
+    <section>
+      <div class="rounded bg-light p-4 mb-4 shadow-sm">
+        <h1><%= @flat.name %></h1>
+        <p><%= @flat.address %></p>
+      </div>
+      <div class="rounded bg-light p-4 shadow-sm">
+        <h2>A bit more about this flat...</h2>
+        <p><%= @flat.description %></p>
+        <figure class="map">
+          <img class="rounded" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoibGFsYWJhcmNhIiwiYSI6ImNrd21jMWt2NDI4djEycG52ZHRlbmxsaWIifQ.Xvwv4RwdpexSFVPcgMFTag'>
+        </figure>
+      </div>
+    </section>
+    </div>
+    <div class="col-12 col-lg-4">
+      <aside>
+        <div class="rounded bg-light p-4 mb-4 d-flex flex-column">
+          <h3>Book this place!</h3>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon3">From</span>
+            </div>
+            <input type="date" class="form-control" id="from-date" aria-describedby="basic-addon3">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon3">To:</span>
+            </div>
+            <input type="date" class="form-control" id="to-date" aria-describedby="basic-addon3">
+          </div>
+          <button type="button" class="btn btn-success text-white">Book</button>
+        </div>
+        <div class="rounded bg-light p-4 mb-4 shadow-sm">
+          <h2>Details</h2>
+          <p class="price"><span><strong><i class="fas fa-user-friends"></i></strong><%= @flat.number_of_guests %></span><span><strong><i class="fas fa-euro-sign"></i></strong><%= @flat.price_per_night %></span></p>
+        </div>
+        <div class="rounded bg-light p-4 shadow-sm">
+          <div class="d-flex justify-content-between align-items-center">
+            <span>Share</span>
+            <ul class="list-inline list-unstyled m-0">
+              <li class="list-inline-item"><i class="fab fa-facebook-square"></i></li>
+              <li class="list-inline-item"><i class="fab fa-twitter-square"></i></li>
+              <li class="list-inline-item"><i class="fab fa-pinterest-square"></i></li>
+              <li class="list-inline-item"><i class="fas fa-envelope-square"></i></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>

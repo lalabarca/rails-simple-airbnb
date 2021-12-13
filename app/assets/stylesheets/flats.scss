@@ -5,11 +5,38 @@ body {
   background-color: white;
 }
 
-.new_flat {
+.new_flat, .edit_flat {
   display: flex;
   flex-direction: column;
 }
 
-.new_flat + a {
+.new_flat + a, .edit_flat + a {
   margin-top: 2rem;
+}
+
+main > div {
+  margin-top: -7rem;
+}
+
+.banner {
+  height: 40vh;
+  background-position: center;
+  background-size: cover;
+}
+
+aside li {
+  font-size: 2rem;
+}
+
+aside div:last-child span {
+  font-size: 1.2rem;
+}
+
+figure.map {
+  height: 400px;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
